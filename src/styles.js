@@ -41,11 +41,18 @@ export const Header = styled.header`
         letter-spacing: 0px;
         text-transform: uppercase;
         color: #141530;
+
+        @media screen and (max-width: 800px) {
+          margin-left: 0px;
+        }
       }
 
       > button {
-        margin-left: 200px;
+        @media screen and (max-width: 800px) {
+          display: none;
+        }
 
+        margin-left: 200px;
         width: 408px;
         height: 70px;
         background: #145ca7;
@@ -71,16 +78,17 @@ export const Main = styled.main`
 export const Options = styled.section`
   display: flex;
   flex-direction: column;
-  width: 100%;
   height: 668px;
   flex: 1;
   padding: 40px auto;
   align-items: center;
   justify-content: space-around;
 
-  h1 {
-    width: 784px;
-    height: 48px;
+  @media screen and (max-width: 800px) {
+    margin-top: 400px;
+  }
+
+  > h1 {
     font-weight: bold;
     font-size: 40px;
     font-family: "Roboto";
@@ -97,12 +105,19 @@ export const Options = styled.section`
     text-align: center;
     letter-spacing: 0px;
     color: #535353;
+    @media screen and (max-width: 800px) {
+      margin-bottom: 50px;
+    }
   }
 
   ul {
     display: flex;
     list-style: none;
     justify-content: space-between;
+
+    @media screen and (max-width: 800px) {
+      flex-direction: column;
+    }
 
     li {
       width: 361px;
@@ -139,6 +154,11 @@ export const Options = styled.section`
 
       & + li {
         margin-left: 30px;
+
+        @media screen and (max-width: 800px) {
+          margin-left: 0px;
+          margin-top: 30px;
+        }
       }
     }
   }
@@ -164,8 +184,6 @@ export const Highlight = styled.section`
     justify-content: space-between;
 
     h1 {
-      width: 784px;
-      height: 48px;
       font-weight: bold;
       font-size: 36px;
       font-family: "Roboto";
