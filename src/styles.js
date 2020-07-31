@@ -117,6 +117,7 @@ export const Options = styled.section`
 
     @media screen and (max-width: 800px) {
       flex-direction: column;
+      height: 1200px;
     }
 
     li {
